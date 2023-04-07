@@ -13,5 +13,5 @@ def solution(p: float, x: np.array) -> tuple:
     critical = norm.ppf((1 + p) / 2, df)
     lower_bound = (df * variance) / critical
     upper_bound = (df * variance) / norm.ppf((1 - p) / 2, df)
-    confidence_interval = (lower_bound, upper_bound)
-    return confidence_interval
+    return lower_bound, \
+           upper_bound
